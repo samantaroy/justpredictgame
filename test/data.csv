@@ -1,13 +1,5 @@
-day, count
-day1, 12
-day2, 13
-day3, 9
-day4, 16
-day5, 13
-day6, 7
-day7, 11
-day8, 13
-day9, 10
-day10, 15
-
-
+Name,Weeks,Gender
+Steffi Graf,377,Female
+Martina Navratilova,332,Female
+Serena Williams,319,Female
+Roger Federer,308,Male
