@@ -3,55 +3,53 @@
 <script src = "https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js"></script>
 <script>
 
-d3.csv('https://raw.githubusercontent.com/samantaroy/justpredictgame/master/test/data.csv?token=AKVFU5OKHLOS6CYO6WK6ZUC7B5PGK')
-.then(makeChart);
+	//requesting data using d3
+	d3.csv('https://raw.githubusercontent.com/samantaroy/justpredictgame/master/test/data.csv')
+	.then(makeChart);
 
-function makeChart(players
+	function makeChart(players){
+	var dayLabels = players.map(function(d) {return d.Day});
 
-  var dayLabels = players.map(function(d){
-    return d.day
-  });
+  var numCases = players.map(function(d) {return d.NumCases});
 
-  var numbers = players.map(funtion(d){
-    return d.count
-  })
+		let mychart = document.getElementById('mychart').getContext('2d');
 
 
 
-  let mychart = document.getElementById('mychart').getContext('2d');
+		let massChart = new Chart(mychart, {
+			type: 'bar',
+			data:{
+				labels: dayLabels,
+				//dayLabels,
+				//['A', 'B', 'C', 'D'],
+				datasets:[{
+					label: 'Number of Cases',
+					data: numCases,
+					//numCases,
+					//[ 12,13,14,15,16],
+
+					backgroundColor : 'rgba(228,223, 150, 0.6)',
+					borderWidth:1,
+					borderColor: '#777',
+					hoverBorderWidth: 3,
+					hoverBorderColor: '#000'
+
+				}]
+			},
+			options:{
+				title:{
+					display :true,
+					text: 'New COVID Cases',
+					fontSize : 25
 
 
 
-  let massChart = new Chart(mychart, {
-    type: 'bar',
-    data:{
-      labels:dayLabels,
-      datasets:[{
-        label: 'Number of Cases',
-        data:numbers,
+				},
+				legend:{
+					display:false
+				}
+			}
+		});
 
-        backgroundColor : 'rgba(115, 0, 192, 0.6)',
-        borderWidth:1,
-        borderColor: '#777',
-        hoverBorderWidth: 3,
-        hoverBorderColor: '#000'
-
-      }]
-    },
-    options:{
-      title:{
-        display :true,
-        text: 'Template Game Chart',
-        fontSize : 25
-
-
-
-      },
-      legend:{
-        display:false
-      }
-    }
-  });
 }
-
 </script>
