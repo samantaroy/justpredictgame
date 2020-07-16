@@ -1,13 +1,21 @@
-day, count
-day1, 12
-day2, 13
-day3, 9
-day4, 16
-day5, 13
-day6, 7
-day7, 11
-day8, 13
-day9, 10
-day10, 15
-
-
+Day,NumCases
+Day 1,377
+Day 2,332
+Day 3,319
+Day 4,308
+Day 5,377
+Day 6,332
+Day 7,319
+Day 8,308
+Day 9,377
+Day 10,332
+Day 11,319
+Day 12,308
+Day 13,377
+Day 14,332
+Day 15,319
+Day 16,308
+Day 17,377
+Day 18,332
+Day 19,319
+Day 20,308
